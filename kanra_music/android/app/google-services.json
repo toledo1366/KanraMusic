@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "320224193355",
+    "project_id": "kanramusic",
+    "storage_bucket": "kanramusic.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:320224193355:android:a6f6d0a350a0bdac0396ce",
+        "android_client_info": {
+          "package_name": "com.example.kanra_music"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBY1_P4q7488VHNSG6XAtphBaNsE-EunMU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
