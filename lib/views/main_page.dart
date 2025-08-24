@@ -6,7 +6,7 @@ import '../core/strings/texts.dart';
 import '../services/navigation_service.dart';
 
 class MainPage extends StatelessWidget {
-  MainPage({super.key});
+  const MainPage({super.key});
 
   @override
   Widget build(BuildContext context) {

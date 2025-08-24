@@ -1,90 +1,96 @@
 import 'package:flutter/material.dart';
 
-class CreateGamePage extends StatelessWidget {
-  CreateGamePage({super.key});
+import '../services/navigation_service.dart';
+import 'base_page.dart';
 
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>(); 
+class CreateGamePage extends StatefulWidget {
+  const CreateGamePage({super.key});
+
+  @override
+  State<CreateGamePage> createState() => _CreateGamePageState();
+}
+
+class _CreateGamePageState extends State<CreateGamePage> {
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final TextEditingController _playerNameController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Create game'),
-      ),
-      backgroundColor: Colors.black,
-      body: Center(
-        child: Form(
-          key: _formKey,
-          child: Padding(
-            padding: const EdgeInsets.all(15),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                TextFormField(
-                  decoration: const InputDecoration(
-                    labelText: 'Enter your name:'
+      body: BasePage(
+          Padding(
+            padding: const EdgeInsets.only(left: 67, right: 67),
+            child: Form(
+              key: _formKey,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  TextFormField(
+                    controller: _playerNameController,
+                    style: TextStyle(
+                      // fontFamily: 'Inter',
+                      fontSize: 16,
+                      height: 26 / 16, // line-height / font-size
+                      fontWeight: FontWeight.w400,
+                      color: Color(0xFFBCC1CA), // neutral-400
+                    ),
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Color(0xFF424955), // neutral-650
+                      contentPadding: EdgeInsets.symmetric(
+                        vertical: 9,
+                        horizontal: 12,
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(6),
+                        borderSide: BorderSide(
+                          color: Color(0xFF9095A0), // neutral-500
+                          width: 1,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(6),
+                        borderSide: BorderSide(
+                          color: Color(0xFF9095A0), // neutral-500
+                          width: 1,
+                        ),
+                      ),
+                      disabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(6),
+                        borderSide: BorderSide(
+                          color: Color(0xFF9095A0), // neutral-500
+                          width: 1,
+                        ),
+                      ),
+                      hintText: 'Player Name',
+                      hintStyle: TextStyle(
+                        color: Color(0xFFBCC1CA), // neutral-400
+                      ),
+                    ),
                   ),
-                  style: const TextStyle(
-                    color: Colors.white
-                  ),
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return 'Please enter your name!'; 
-                    }
-                    return null; 
-                  },
-                  onSaved: (value) {
-                  },
-                ),
-                TextFormField(
-                  keyboardType: TextInputType.number,
-                  decoration: const InputDecoration(
-                    labelText: 'Enter players count:'
-                  ),
-                  style: const TextStyle(
-                    color: Colors.white
-                  ),
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return 'You have to set players count!'; 
-                    }
-                    return null; 
-                  },
-                ),
-                TextFormField(
-                  keyboardType: TextInputType.number,
-                  decoration: const InputDecoration(
-                    labelText: 'Enter songs count for each player:'
-                  ),
-                  style: const TextStyle(
-                    color: Colors.white
-                  ),
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return 'You have to set songs count for each player!'; 
-                    }
-                    return null; 
-                  },
-                ),
-                TextFormField(
-                  keyboardType: TextInputType.number,
-                  decoration: const InputDecoration(
-                    labelText: 'Enter time for songs in seconds:'
-                  ),
-                  style: const TextStyle(
-                    color: Colors.white
-                  ),
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return 'You have to set time for songs!'; 
-                    }
-                    return null; 
-                  },
-                ),
-              ],
+                  SizedBox(height: 24),
+                  GestureDetector(
+                    onTap: () => router.go('/lobby'),
+                    child: Container(
+                      alignment: AlignmentGeometry.center,
+                      width: 109,
+                      height: 50,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.orange),
+                      child: Text(
+                        'Create lobby',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w400
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
           )
-        ),
       ),
     );
   }
