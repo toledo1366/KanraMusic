@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kanraa/views/base_page.dart';
+import 'package:kanraa/shared/presentation/base_page.dart';
 
-import '../services/navigation_service.dart';
+import '../../../core/router/navigation_service.dart';
 
 class JoinGamePage extends StatefulWidget {
   const JoinGamePage({super.key});

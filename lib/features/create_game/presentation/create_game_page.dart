@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../services/navigation_service.dart';
-import 'base_page.dart';
+import '../../../core/router/navigation_service.dart';
+import '../../../shared/presentation/base_page.dart';
 
 class CreateGamePage extends StatefulWidget {
   const CreateGamePage({super.key});

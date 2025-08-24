@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:kanraa/views/base_page.dart';
+import 'package:kanraa/shared/presentation/base_page.dart';
 
-import '../core/strings/texts.dart';
-import '../services/navigation_service.dart';
+import '../../../core/strings/texts.dart';
+import '../../../core/router/navigation_service.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});

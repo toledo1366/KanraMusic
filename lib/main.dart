@@ -1,7 +1,7 @@
 // import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 // import 'package:kanra_music/firebase_options.dart';
-import 'services/navigation_service.dart';
+import 'core/router/navigation_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

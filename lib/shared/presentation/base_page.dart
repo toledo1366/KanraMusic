@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kanraa/core/strings/texts.dart';
 
-import '../services/navigation_service.dart';
+import '../../core/router/navigation_service.dart';
 
 class BasePage extends StatelessWidget {
   final Widget page;
