@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kanraa/core/strings/texts.dart';
+import 'package:kanraa/core/styles/colors.dart';
 
 import '../../core/router/navigation_service.dart';
 
@@ -43,7 +44,7 @@ class BasePage extends StatelessWidget {
                           left: 114, right: 114, top: 32, bottom: 232),
                       child: Text(
                         kanraaName,
-                        style: TextStyle(color: Colors.orange, fontSize: 40, fontFamily: 'Aclonica'),
+                        style: TextStyle(color: Color(brandColor), fontSize: 40, fontFamily: 'Aclonica'),
                       ),
                     ),
                     page

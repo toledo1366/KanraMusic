@@ -22,10 +22,8 @@ final GoRouter router = GoRouter(
         ),
         GoRoute(
             path: '/lobby',
-            builder: (context, state) {
-              String playerName = state.extra as String;
-              return LobbyPage(playerName);
-        })
+            builder: (context, state) => const LobbyPage(),
+        )
       ]
     ),
   ]

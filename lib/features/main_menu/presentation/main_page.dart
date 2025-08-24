@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:kanraa/core/styles/colors.dart';
 import 'package:kanraa/shared/presentation/base_page.dart';
 
 import '../../../core/strings/texts.dart';
@@ -25,7 +26,7 @@ class MainPage extends StatelessWidget {
                   height: 50,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.orange),
+                      color: Color(brandColor)),
                   child: Text(
                     'Create game',
                     style: TextStyle(
@@ -46,7 +47,7 @@ class MainPage extends StatelessWidget {
                   height: 50,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.orange),
+                      color: Color(brandColor)),
                   child: Text(
                     'Join game',
                     style: TextStyle(
@@ -73,7 +74,7 @@ class MainPage extends StatelessWidget {
                     ),
                     child: Container(
                       decoration: BoxDecoration(
-                          color: Colors.orange,
+                          color: Color(brandColor),
                           borderRadius: BorderRadius.all(Radius.circular(18))
                       ),
                       child: Icon(Icons.question_mark, color: Colors.white,),

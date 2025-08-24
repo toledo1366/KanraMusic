@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kanraa/core/styles/colors.dart';
 import 'package:kanraa/shared/presentation/base_page.dart';
 
 import '../../../core/router/navigation_service.dart';
@@ -123,7 +124,7 @@ class _JoinGamePageState extends State<JoinGamePage> {
                       height: 50,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.orange),
+                          color: Color(brandColor)),
                       child: Text(
                         'Join game',
                         style: TextStyle(

@@ -1,0 +1,1 @@
+const int brandColor = 0xFFea916e;

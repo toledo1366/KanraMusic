@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kanraa/core/styles/colors.dart';
 
 import '../../../core/router/navigation_service.dart';
 import '../../../shared/presentation/base_page.dart';
@@ -77,7 +78,7 @@ class _CreateGamePageState extends State<CreateGamePage> {
                       height: 50,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.orange),
+                          color: Color(brandColor)),
                       child: Text(
                         'Create lobby',
                         style: TextStyle(
